@@ -26,7 +26,7 @@ status=217/USER
 
 ### Screenshot: Service Failure (217/USER)
 
-![](images/Screenshot%20from%202026-06-15%2007-16-37.png)
+![](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/f6b13b9c40ba33e4402b477d35861940da24423c/images/Screenshot%20from%202026-06-15%2007-16-37.png)
 At this stage, the error code indicated a user-related startup problem, but further investigation was required before determining the exact cause.
 
 ---
