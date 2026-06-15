@@ -26,8 +26,7 @@ status=217/USER
 
 ### Screenshot: Service Failure (217/USER)
 
-https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-16-37.png
-
+![](images/Screenshot%20from%202026-06-15%2007-16-37.png)
 At this stage, the error code indicated a user-related startup problem, but further investigation was required before determining the exact cause.
 
 ---
@@ -50,8 +49,7 @@ User=hello
 
 ### Screenshot: Reviewing Service Configuration
 
-https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-17-14.png
-
+![](images/Screenshot%20from%202026-06-15%2007-17-14.png)
 Since the service was configured to run under a specific Linux user account, validating the existence of that account became the next logical step.
 
 ---
@@ -72,8 +70,7 @@ id: 'hello': no such user
 
 ### Screenshot: Verifying User Existence
 
-https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-17-57.png
-
+![](images/Screenshot%20from%202026-06-15%2007-17-57.png)
 This immediately highlighted a discrepancy between the service configuration and the operating system.
 
 ---
@@ -88,8 +85,7 @@ whoami
 
 ### Screenshot: Checking Existing User Context
 
-https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-18-23.png
-
+![](images/Screenshot%20from%202026-06-15%2007-18-23.png)
 This confirmed that the service account configured in the unit file did not correspond to a valid user available on the system.
 
 ---
@@ -141,8 +137,7 @@ Active: active (running)
 
 ### Screenshot: Service Successfully Restored
 
-https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-19-26.png
-
+![](images/Screenshot%20from%202026-06-15%2007-19-26.png)
 The application became available and normal operation was restored.
 
 ---
