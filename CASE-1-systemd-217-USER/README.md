@@ -115,7 +115,7 @@ status=217/USER
 The service definition was updated to use the correct service account.
 
 ```ini
-User=myapp
+User=tabarak
 ```
 
 After updating the configuration, systemd was reloaded and the service was restarted.
