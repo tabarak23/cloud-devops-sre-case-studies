@@ -24,6 +24,10 @@ Active: failed
 status=217/USER
 ```
 
+### Screenshot: Service Failure (217/USER)
+
+https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-16-37.png
+
 At this stage, the error code indicated a user-related startup problem, but further investigation was required before determining the exact cause.
 
 ---
@@ -41,8 +45,12 @@ cat /etc/systemd/system/myapp.service
 Relevant configuration:
 
 ```ini
-User=abcdefg
+User=hello
 ```
+
+### Screenshot: Reviewing Service Configuration
+
+https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-17-14.png
 
 Since the service was configured to run under a specific Linux user account, validating the existence of that account became the next logical step.
 
@@ -53,16 +61,36 @@ Since the service was configured to run under a specific Linux user account, val
 To confirm whether the configured user existed on the server, I executed:
 
 ```bash
-id abcdefg
+id hello
 ```
 
 Output:
 
 ```text
-id: 'abcdefg': no such user
+id: 'hello': no such user
 ```
 
+### Screenshot: Verifying User Existence
+
+https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-17-57.png
+
 This immediately highlighted a discrepancy between the service configuration and the operating system.
+
+---
+
+### Step 3: Verify Existing User Context
+
+To further validate the finding, I checked the currently logged-in user and existing system context.
+
+```bash
+whoami
+```
+
+### Screenshot: Checking Existing User Context
+
+https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-18-23.png
+
+This confirmed that the service account configured in the unit file did not correspond to a valid user available on the system.
 
 ---
 
@@ -92,7 +120,6 @@ After updating the configuration, systemd was reloaded and the service was resta
 
 ```bash
 sudo systemctl daemon-reload
-
 sudo systemctl restart myapp
 ```
 
@@ -112,15 +139,15 @@ Result:
 Active: active (running)
 ```
 
-Additional application-level validation was also performed to ensure the service was responding as expected.
+### Screenshot: Service Successfully Restored
+
+https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c20617fe40718c03fef16e13c8c58994ea62afce/Screenshot%20from%202026-06-15%2007-19-26.png
 
 The application became available and normal operation was restored.
 
 ---
 
 ## Troubleshooting Workflow
-
-This investigation followed a structured troubleshooting methodology commonly used in Cloud Support, Site Reliability Engineering (SRE), and Operations teams:
 
 ```text
 Service Failure Detected
@@ -131,7 +158,7 @@ Analyze Error Code
           ↓
 Inspect Service Configuration
           ↓
-Validate Dependencies
+Validate User Configuration
           ↓
 Identify Root Cause
           ↓
@@ -140,16 +167,15 @@ Apply Remediation
 Verify Service Recovery
 ```
 
-Rather than making assumptions based solely on an error code, each step was validated using system evidence before corrective actions were taken.
-
 ---
 
 ## Key Takeaways
 
-* systemd error codes should be treated as investigation starting points, not conclusions.
-* Service configuration should always be validated when troubleshooting startup failures.
-* Verifying the existence of configured service accounts is an important step when investigating 217/USER errors.
-* Effective troubleshooting requires evidence-based analysis, root cause validation, and post-fix verification.
+* Error codes should be treated as starting points for investigation, not final answers.
+* Always inspect the service configuration before making changes.
+* Validate whether the configured service account exists on the operating system.
+* Confirm the root cause using evidence before applying a fix.
+* Always verify service health after remediation.
 
 ---
 
@@ -168,6 +194,4 @@ Rather than making assumptions based solely on an error code, each step was vali
 
 ## Conclusion
 
-This investigation reinforced the importance of structured troubleshooting during service outages. By following a methodical approach—observe, investigate, validate, remediate, and verify—it was possible to quickly identify the root cause and restore service availability.
-
-The experience reflects the type of diagnostic workflow commonly used by Cloud Support Engineers, SREs, and Infrastructure Operations teams when responding to production service failures.
+This investigation demonstrates a structured troubleshooting approach commonly used by Cloud Support Engineers, SREs, and Infrastructure Operations teams. By following a methodical process of observation, validation, remediation, and verification, it was possible to identify the root cause of the failure and restore service availability with confidence.
