@@ -49,7 +49,7 @@ User=hello
 
 ### Screenshot: Reviewing Service Configuration
 
-![](images/https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-17-14.png)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-17-14.png)
 Since the service was configured to run under a specific Linux user account, validating the existence of that account became the next logical step.
 
 ---
@@ -70,7 +70,7 @@ id: 'hello': no such user
 
 ### Screenshot: Verifying User Existence
 
-![](images/https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-17-57.png)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-17-57.png)
 This immediately highlighted a discrepancy between the service configuration and the operating system.
 
 ---
@@ -85,7 +85,7 @@ whoami
 
 ### Screenshot: Checking Existing User Context
 
-![](images/https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-18-23.png)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-18-23.png)
 This confirmed that the service account configured in the unit file did not correspond to a valid user available on the system.
 
 ---
@@ -137,7 +137,7 @@ Active: active (running)
 
 ### Screenshot: Service Successfully Restored
 
-![](images/https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-19-26.png)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/6445b53150f7968533690302dd07c6da3efd7779/images/Screenshot%20from%202026-06-15%2007-19-26.png)
 The application became available and normal operation was restored.
 
 ---
