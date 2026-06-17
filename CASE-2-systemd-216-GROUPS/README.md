@@ -242,7 +242,7 @@ Application Running Successfully
 
 ### Screenshot: Application Health Verification
 
-![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/b4c1f7692febfd7ec3366aaccc11140fa30ca9ad/images/Screenshot%20from%202026-06-17%2005-58-14.png0)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/b4c1f7692febfd7ec3366aaccc11140fa30ca9ad/images/Screenshot%20from%202026-06-17%2005-58-14.png)
 
 
 Normal service operation was restored successfully.
