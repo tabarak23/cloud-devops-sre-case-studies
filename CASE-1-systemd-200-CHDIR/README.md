@@ -254,7 +254,7 @@ Active: active (running)
 
 ## Screenshot 7: Service Successfully Restored
 
-![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/1b92b1c6d869722d6f6a5fbb11af088b3ec086c6/images/Screenshot%20from%202026-06-21%2008-43-21.png)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/c1d8536ce8182213bef264b955adafa930593bcb/images/Screenshot%20from%202026-06-21%2008-42-53.png)
 
 
 To confirm that the application itself was functioning correctly, I tested the service endpoint.
