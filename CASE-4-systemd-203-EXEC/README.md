@@ -1,6 +1,6 @@
 # Incident Investigation: Diagnosing a systemd 203/EXEC Service Startup Failure
 
-![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/a32d7062ac938c0f635846bf3d12da54f92e569b/images/Gemini_Generated_Image_pxf9hgpxf9hgpxf9%20(1).png)
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/3f31e507940395836a045650c6ce0a0aa7b09e47/images/Gemini_Generated_Image_1p290q1p290q1p29.png)
 
 ## Troubleshooting skills are often more valuable than the actual fix.
 
