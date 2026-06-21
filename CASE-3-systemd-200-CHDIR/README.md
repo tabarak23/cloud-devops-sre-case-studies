@@ -1,8 +1,9 @@
 # Incident Investigation: Diagnosing a systemd 200/CHDIR Service Startup Failure
 
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/3f31e507940395836a045650c6ce0a0aa7b09e47/images/Gemini_Generated_Image_1p290q1p290q1p29.png)
+
 ## Troubleshooting skills are often more valuable than the actual fix.
 
-![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/3f31e507940395836a045650c6ce0a0aa7b09e47/images/Gemini_Generated_Image_1p290q1p290q1p29.png)
 
 Modern AI tools can quickly explain Linux error codes and suggest possible solutions. However, effective troubleshooting still depends on understanding how systems work, gathering evidence, validating assumptions, and identifying the actual root cause.
 
