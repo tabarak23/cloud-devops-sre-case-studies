@@ -1,6 +1,9 @@
 # Incident Investigation: Diagnosing a systemd 203/EXEC Service Startup Failure
 
+![image alt](https://github.com/tabarak23/cloud-devops-sre-case-studies/blob/a32d7062ac938c0f635846bf3d12da54f92e569b/images/Gemini_Generated_Image_pxf9hgpxf9hgpxf9%20(1).png)
+
 ## Troubleshooting skills are often more valuable than the actual fix.
+
 
 Modern AI tools can explain Linux error codes, suggest commands, and provide troubleshooting guidance. However, effective troubleshooting still depends on understanding Linux fundamentals, analyzing logs, validating assumptions, and identifying the actual root cause.
 
